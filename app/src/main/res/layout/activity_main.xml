@@ -1,88 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     tools:context="com.example.ollamh.whodat.MainActivity"
     tools:layout_editor_absoluteX="8dp"
     tools:layout_editor_absoluteY="8dp">
 
 
-
-    <TextView android:id="@+id/app_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        />
-
-    <TextView android:id="@+id/app_description"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_description"
-        android:textAlignment="center"
-        android:layout_below="@id/app_name"
-        android:layout_above="@id/season_spinner_label"
-        />
-
-    <LinearLayout android:id="@+id/vertical_anchor"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_centerVertical="true">
-    </LinearLayout>
-
-    <LinearLayout android:id="@+id/horizontal_anchor"
-        android:layout_width="30dp"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true">
-    </LinearLayout>
-
-    <TextView android:id="@+id/season_spinner_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/season_spinner_label"
-        android:layout_above="@id/vertical_anchor"
-        android:layout_alignBaseline="@id/season_spinner"
-        android:layout_toLeftOf="@id/horizontal_anchor"
-        android:layout_toStartOf="@id/horizontal_anchor"
-        />
-
-    <Spinner android:id="@+id/season_spinner"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/vertical_anchor"
-        android:layout_toRightOf="@id/horizontal_anchor"
-        android:layout_toEndOf="@id/horizontal_anchor"
-        android:entries="@array/seasons">
-    </Spinner>
-
-    <TextView android:id="@+id/episode_spinner_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/episode_spinner_label"
-        android:layout_below="@id/vertical_anchor"
-        android:layout_alignBaseline="@id/episode_spinner"
-        android:layout_toLeftOf="@id/horizontal_anchor"
-        android:layout_toStartOf="@id/horizontal_anchor"
-        />
-
-    <Spinner android:id="@+id/episode_spinner"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/vertical_anchor"
-        android:layout_toRightOf="@id/horizontal_anchor"
-        android:layout_toEndOf="@id/horizontal_anchor"
-        android:entries="@array/episodes">
-    </Spinner>
-
-    <Button android:id="@+id/search_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/search"
-        android:layout_marginTop="50dp"
-        android:layout_below="@id/episode_spinner_label"
+        android:layout_marginTop="43dp"
+        app:srcCompat="@mipmap/got"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/app_description"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/season"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tagline"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="79dp"
+        android:text="Seasons:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/Episodes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Episodes:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:layout_below="@+id/season"
+        android:layout_alignLeft="@+id/season"
+        android:layout_alignStart="@+id/season"
+        android:layout_marginTop="32dp" />
+
+    <Spinner
+        android:id="@+id/season_spinner"
+        android:layout_width="@android:dimen/thumbnail_width"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Episodes"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:layout_toEndOf="@+id/Episodes"
+        android:layout_toRightOf="@+id/Episodes"
+        android:background="@color/colorPrimary"
+        android:requiresFadingEdge="horizontal"
+        android:textAlignment="center"
+        android:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/episode_spinner"
+        android:layout_width="@android:dimen/thumbnail_width"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Episodes"
+        android:layout_alignLeft="@+id/season_spinner"
+        android:layout_alignStart="@+id/season_spinner"
+        android:background="@color/colorPrimary"
+        android:textAlignment="center"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:background="@color/colorPrimary"
+        android:text="Search"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/episode_spinner"
+        android:layout_alignStart="@+id/episode_spinner"
+        android:gravity="center"
+        />
 
 </RelativeLayout>
