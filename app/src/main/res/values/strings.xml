@@ -3,6 +3,7 @@
     <string name="app_description">A  spoiler free visual companion for the Game of Thrones casual</string>
     <string name="season_spinner_label">Season:</string>
     <string name="episode_spinner_label">Episode:</string>
+    <string name="search">Search</string>
     <array name="seasons">
         <item name="1">1</item>
         <item name="2">2</item>
@@ -12,7 +13,7 @@
         <item name="6">6</item>
         <item name="7">7</item>
     </array>
-    <array name="episode">
+    <array name="episodes">
         <item name="1">1</item>
         <item name="2">2</item>
         <item name="3">3</item>
