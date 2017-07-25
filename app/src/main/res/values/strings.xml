@@ -4,5 +4,12 @@
     <string name="season_spinner_label">Season:</string>
     <string name="episode_spinner_label">Episode:</string>
     <string name="name">Jon Snow</string>
+    <string name="title_activity_summary">Summary</string>
+    <string name="charactersummary">King Jon Snow is the son of Lady Lyanna Stark and Rhaegar Targaryen, the Prince of Dragonstone. From infancy, Jon is presented as the bastard son of Lord Eddard Stark,
+        Lyanna\'s brother, and raised by Eddard alongside his lawful children at Winterfell but his true parentage is kept secret from everyone, including Jon himself. In order to escape his bastard status,
+        Jon joins the Night\'s Watch and is eventually chosen as Lord Commander.
+        </string>
+
+    <string name="action_settings">Settings</string>
 
 </resources>
