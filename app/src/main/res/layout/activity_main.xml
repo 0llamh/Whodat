@@ -41,7 +41,7 @@
         android:layout_marginLeft="23dp"
         android:layout_marginStart="23dp"
         android:layout_marginTop="79dp"
-        android:text="Seasons:"
+        android:text="@string/season_spinner_label"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp" />
 
@@ -49,7 +49,7 @@
         android:id="@+id/Episodes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Episodes:"
+        android:text="@string/episode_spinner_label"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp"
         android:layout_below="@+id/season"
