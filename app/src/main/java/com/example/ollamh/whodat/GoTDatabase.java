@@ -42,7 +42,7 @@ public class GoTDatabase extends SQLiteOpenHelper {
             try{
                 copyDatabase();
             } catch (IOException e){
-                throw new Error("Error copying database")
+                throw new Error("Error copying database");
             }
         }
     }
