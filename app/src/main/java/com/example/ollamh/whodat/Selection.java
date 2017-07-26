@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import java.util.List;
 public class Selection extends AppCompatActivity {
 
-    List<Characters> cList;
+    List<Character> cList;
 
 
 
@@ -20,7 +20,7 @@ public class Selection extends AppCompatActivity {
         RecyclerView rvCharacters = (RecyclerView) findViewById(R.id.rvcharacters);
 
         for(int i =0; i<5; i++){
-            Characters c = new Characters();
+            Character c = new Character();
             c.setName("Jon Snow" + i);
             cList.add(c);
         }

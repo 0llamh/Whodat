@@ -29,10 +29,10 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.View
 
     }
 
-    private List<Characters> charactersList;
+    private List<Character> charactersList;
     private Context context;
 
-    public CharacterAdapter(Context c, List<Characters> characters){
+    public CharacterAdapter(Context c, List<Character> characters){
 
         context=c;
         charactersList=characters;
@@ -61,7 +61,7 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.View
     @Override
     public void onBindViewHolder(CharacterAdapter.ViewHolder holder, int position) {
 
-        Characters character = charactersList.get(position);
+        Character character = charactersList.get(position);
 
         TextView textView = holder.characterName;
         textView.setText(character.getName());
