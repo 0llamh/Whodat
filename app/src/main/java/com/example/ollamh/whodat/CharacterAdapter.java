@@ -1,5 +1,7 @@
 package com.example.ollamh.whodat;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -22,8 +24,19 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.View
 
         public ViewHolder(View itemView){
             super(itemView);
-            characterName=(TextView)itemView.findViewById(R.id.name);
-            characterFace=(ImageButton)itemView.findViewById(R.id.imageButton);
+            characterName=(TextView)itemView.findViewById(R.id.character_name);
+            characterFace=(ImageButton)itemView.findViewById(R.id.character_pic);
+
+            characterFace.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getContext(), CharacterWiki.class);
+                    intent.putExtra("character", characterName.toString());
+                    intent.putExtra("season", season);
+                    context.startActivity(intent);
+
+                }
+            });
 
         }
 
@@ -31,12 +44,13 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.View
 
     private List<Character> charactersList;
     private Context context;
+    private String season;
 
-    public CharacterAdapter(Context c, List<Character> characters){
+    public CharacterAdapter(Context c, List<Character> characters,String s){
 
         context=c;
         charactersList=characters;
-
+        season = s;
     }
 
     private Context getContext(){

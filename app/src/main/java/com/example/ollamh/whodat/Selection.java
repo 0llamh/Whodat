@@ -33,9 +33,11 @@ public class Selection extends AppCompatActivity {
             cList.add(c);
         }
         //I can't get the recycler to display properly!! :(
-        CharacterAdapter adapt= new CharacterAdapter(this,cList);
+        CharacterAdapter adapt= new CharacterAdapter(this,cList, season);
         rvCharacters.setAdapter(adapt);
-        rvCharacters.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayoutManager linearlayout = new LinearLayoutManager(this);
+        linearlayout.setOrientation(LinearLayoutManager.VERTICAL);
+        rvCharacters.setLayoutManager(linearlayout);
 
     }
 }
