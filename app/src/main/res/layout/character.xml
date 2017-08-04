@@ -8,19 +8,20 @@
 
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/character_pic"
         android:layout_width="168dp"
         android:layout_height="155dp"
         android:background="@android:color/background_dark"
         app:srcCompat="@mipmap/jonsnow" />
 
-    <EditText
-        android:id="@+id/name"
+    <TextView
+        android:id="@+id/character_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:ems="10"
-        android:inputType="textPersonName"
         android:text="@string/name"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp" />
+
 </LinearLayout>
