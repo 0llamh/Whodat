@@ -3,12 +3,15 @@ package com.example.ollamh.whodat;
 
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +44,24 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        createDatabase();
+
+    }
+
+    private void createDatabase(){
+
+        GoTDatabaseHelper dbHelper = new GoTDatabaseHelper(getApplicationContext(), "name", null, 1);
+            // needs this context, a dummy name (will be overwritten), cursorfactory obj, version)
+
+        try {
+            dbHelper.createDatabase();
+            dbHelper.openDataBase();
+        } catch (IOException ioe){
+            throw new Error("Unable to create Database");
+        } catch (SQLiteException sqle){
+            throw sqle;
+        }
 
     }
 }
