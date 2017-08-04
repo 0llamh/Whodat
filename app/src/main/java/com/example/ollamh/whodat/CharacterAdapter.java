@@ -28,11 +28,12 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.View
             characterFace=(ImageButton)itemView.findViewById(R.id.character_pic);
             //check charactername to set characterresource to correct mipmap
 
+
             characterFace.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getContext(), CharacterWiki.class);
-                    intent.putExtra("character", characterName.toString());
+                    intent.putExtra("character", characterName.getText().toString());
                     intent.putExtra("season", season);
                     context.startActivity(intent);
                 }
@@ -80,7 +81,51 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.View
         TextView textView = holder.characterName;
         textView.setText(character.getName());
         ImageButton button=holder.characterFace;
-        button.setImageResource(R.mipmap.jonsnow);
+        String name = textView.getText().toString();
+        if(name.equals("Jon Snow"))
+        {
+            button.setImageResource(R.mipmap.jonsnow);
+        }
+        else if(name.equals("Daenerys Targaryen"))
+        {
+            button.setImageResource(R.mipmap.daenerys);
+        }
+        else if(name.equals("Viserys Targaryen"))
+        {
+            button.setImageResource(R.mipmap.viserys);
+        }
+        else if(name.equals("Robb Stark"))
+        {
+            button.setImageResource(R.mipmap.viserys);
+        }
+        else if(name.equals("Jaime Lannister"))
+        {
+            button.setImageResource(R.mipmap.jaime);
+        }
+        else if(name.equals("Eddard \"Ned\" Stark"))
+        {
+            button.setImageResource(R.mipmap.nedstark);
+        }
+        else if(name.equals("Robert Baratheon"))
+        {
+            button.setImageResource(R.mipmap.robertbaratheon);
+        }
+        else if(name.equals("Tyrion Lannister"))
+        {
+            button.setImageResource(R.mipmap.tyrion);
+        }
+        else if(name.equals("Cersei Lannister"))
+        {
+            button.setImageResource(R.mipmap.cersei);
+        }
+        else if(name.equals("Sansa Stark"))
+        {
+            button.setImageResource(R.mipmap.cersei);
+        }
+        else
+        {
+            button.setImageResource(R.mipmap.placeholder);
+        }
 
     }
 

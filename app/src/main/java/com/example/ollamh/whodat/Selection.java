@@ -29,7 +29,12 @@ public class Selection extends AppCompatActivity {
             //if(season.contains(character.relevancecode)
             Character c = new Character();
             //now you set c.setname to the name of the character (taken from database)
-            c.setName("Jon Snow" + i);
+            if(i == 1)
+            {
+                c.setName("Jon Snow");
+            }
+            else
+                c.setName("Tyrion Lannister");
             cList.add(c);
         }
         //I can't get the recycler to display properly!! :(
