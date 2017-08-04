@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class Selection extends AppCompatActivity {
 
-    List<Character> cList = new ArrayList<>();
+    List<Character> cList;
 
 
 
@@ -21,15 +21,18 @@ public class Selection extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         String episode = extras.getString("episode");
         String season = extras.getString("season");
-
+        cList = new ArrayList<Character>();
         RecyclerView rvCharacters = (RecyclerView) findViewById(R.id.rvcharacters);
 
         for(int i =0; i<5; i++){
+            //iterate through characters and get there relevance codes
+            //if(season.contains(character.relevancecode)
             Character c = new Character();
+            //now you set c.setname to the name of the character (taken from database)
             c.setName("Jon Snow" + i);
             cList.add(c);
         }
-
+        //I can't get the recycler to display properly!! :(
         CharacterAdapter adapt= new CharacterAdapter(this,cList);
         rvCharacters.setAdapter(adapt);
         rvCharacters.setLayoutManager(new LinearLayoutManager(this));

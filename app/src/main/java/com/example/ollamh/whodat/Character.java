@@ -28,9 +28,21 @@ public class Character {
 
         return name;
     }
+    public void setRelevance(String n){
+        relevance=n;
+    }
 
+    public String getRelevance(){
+        return relevance;
+    }
 
+    public void setHouse(String n){
+        house = n;
+    }
 
+    public String getHouse(){
+        return house;
+    }
 
 }
 
