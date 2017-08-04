@@ -26,6 +26,7 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.View
             super(itemView);
             characterName=(TextView)itemView.findViewById(R.id.character_name);
             characterFace=(ImageButton)itemView.findViewById(R.id.character_pic);
+            //check charactername to set characterresource to correct mipmap
 
             characterFace.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -34,7 +35,6 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.View
                     intent.putExtra("character", characterName.toString());
                     intent.putExtra("season", season);
                     context.startActivity(intent);
-
                 }
             });
 

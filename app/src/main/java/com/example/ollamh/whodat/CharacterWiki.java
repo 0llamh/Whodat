@@ -14,7 +14,7 @@ public class CharacterWiki extends AppCompatActivity {
         setContentView(R.layout.activity_character_wiki);
         Bundle extras = getIntent().getExtras();
         String season = extras.getString("season");
-        Toast.makeText(this, season, Toast.LENGTH_SHORT).show();
+
 
         TextView summary = (TextView)findViewById(R.id.sum);
         summary.setMovementMethod(new ScrollingMovementMethod());
