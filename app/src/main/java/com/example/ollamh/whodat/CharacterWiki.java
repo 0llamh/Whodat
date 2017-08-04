@@ -17,6 +17,7 @@ public class CharacterWiki extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         String season = extras.getString("season");
         String name = extras.getString("character");
+
         ImageView button = (ImageView) findViewById(R.id.portrait);
         if(name.equals("Jon Snow"))
         {
@@ -57,6 +58,10 @@ public class CharacterWiki extends AppCompatActivity {
         else if(name.equals("Sansa Stark"))
         {
             button.setImageResource(R.mipmap.cersei);
+        }
+        else if(name.equals("Bronn"))
+        {
+            button.setImageResource(R.mipmap.bronn);
         }
         else
         {

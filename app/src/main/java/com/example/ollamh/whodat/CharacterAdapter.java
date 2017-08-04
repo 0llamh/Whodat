@@ -122,6 +122,10 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.View
         {
             button.setImageResource(R.mipmap.cersei);
         }
+        else if(name.equals("Bronn"))
+        {
+            button.setImageResource(R.mipmap.bronn);
+        }
         else
         {
             button.setImageResource(R.mipmap.placeholder);

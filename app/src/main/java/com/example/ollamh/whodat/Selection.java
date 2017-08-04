@@ -31,7 +31,7 @@ public class Selection extends AppCompatActivity {
             //now you set c.setname to the name of the character (taken from database)
             if(i == 1)
             {
-                c.setName("Jon Snow");
+                c.setName("Bronn");
             }
             else
                 c.setName("Tyrion Lannister");
