@@ -29,13 +29,20 @@ public class Selection extends AppCompatActivity {
             //if(season.contains(character.relevancecode)
             Character c = new Character();
             //now you set c.setname to the name of the character (taken from database)
-            c.setName("Jon Snow" + i);
+            if(i == 1)
+            {
+                c.setName("Bronn");
+            }
+            else
+                c.setName("Tyrion Lannister");
             cList.add(c);
         }
         //I can't get the recycler to display properly!! :(
-        CharacterAdapter adapt= new CharacterAdapter(this,cList);
+        CharacterAdapter adapt= new CharacterAdapter(this,cList, season);
         rvCharacters.setAdapter(adapt);
-        rvCharacters.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayoutManager linearlayout = new LinearLayoutManager(this);
+        linearlayout.setOrientation(LinearLayoutManager.VERTICAL);
+        rvCharacters.setLayoutManager(linearlayout);
 
     }
 }

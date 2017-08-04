@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="70dp"
         android:background="@color/colorPrimary"
-        android:text="Search"
+        android:text="@string/search"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/episode_spinner"
         android:layout_alignStart="@+id/episode_spinner"
