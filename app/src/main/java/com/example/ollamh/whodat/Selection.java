@@ -38,8 +38,19 @@ public class Selection extends AppCompatActivity {
             cList.add(c);
         }while(c != null);
 */
+
+        Character d = new Character();
+        Character e = new Character();
+        Character f = new Character();
         c.setName("Jon Snow");
         cList.add(c);
+        d.setName("Daenerys Targaryen");
+        cList.add(d);
+        e.setName("Tyrion Lannister");
+        cList.add(e);
+        f.setName("Robert Baratheon");
+        cList.add(f);
+
 
         CharacterAdapter adapt= new CharacterAdapter(this,cList, season);
         rvCharacters.setAdapter(adapt);
