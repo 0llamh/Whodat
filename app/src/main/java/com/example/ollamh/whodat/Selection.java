@@ -10,9 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class Selection extends AppCompatActivity {
 
-    List<Character> cList;
-
-
+    public static List<Character> cList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,25 +22,30 @@ public class Selection extends AppCompatActivity {
         cList = new ArrayList<Character>();
         RecyclerView rvCharacters = (RecyclerView) findViewById(R.id.rvcharacters);
 
-        for(int i =0; i<5; i++){
+        Character c = new Character();
+        do{
             //iterate through characters and get there relevance codes
             //if(season.contains(character.relevancecode)
-            Character c = new Character();
             //now you set c.setname to the name of the character (taken from database)
-            if(i == 1)
-            {
 
-                c.setName("Bronn");
-            }
-            else
-                c.setName("Tyrion Lannister");
+
+
+            c.setName("Tyrion Lannister");
+            c.getHouse();
+            c.getRelevance();
+            // ..
+
             cList.add(c);
-        }
-        //I can't get the recycler to display properly!! :(
+        }while(c != null);
+
+
         CharacterAdapter adapt= new CharacterAdapter(this,cList, season);
         rvCharacters.setAdapter(adapt);
         LinearLayoutManager linearlayout = new LinearLayoutManager(this);
         linearlayout.setOrientation(LinearLayoutManager.VERTICAL);
         rvCharacters.setLayoutManager(linearlayout);
+
     }
+
+
 }

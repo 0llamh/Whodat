@@ -22,7 +22,7 @@ public class GoTDatabaseHelper extends SQLiteOpenHelper {
 
     private static String NAME = "got.sql";
 
-    private SQLiteDatabase myDataBase;
+    private static SQLiteDatabase characterDB;
 
     private final Context myContext;
 
@@ -90,14 +90,14 @@ public class GoTDatabaseHelper extends SQLiteOpenHelper {
 
         //Open sesame
         String myPath = PATH + NAME;
-        myDataBase = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
+        characterDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
 
     }
 
     @Override
     public synchronized void close() {
-        if(myDataBase != null)
-            myDataBase.close();
+        if(characterDB != null)
+            characterDB.close();
 
         super.close();
     }
