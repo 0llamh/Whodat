@@ -9,11 +9,16 @@ public class Character {
     String name;
     String house;
     String relevance;
+    String background;
+    String season1;
+    //TODO: More seasons
 
     Character(){
         name="";
-        house="Stark";
-        relevance="1234567";
+        house="";
+        relevance="";
+        background="";
+        season1="";
 
 
     }
@@ -42,6 +47,19 @@ public class Character {
 
     public String getHouse(){
         return house;
+    }
+
+    public String getBackground(){
+        return background;
+    }
+    public void setBackground(String n){
+        background = n;
+    }
+    public String getSeason1(){
+        return season1;
+    }
+    public void setSeason1(String n){
+        season1 = n;
     }
 
 }

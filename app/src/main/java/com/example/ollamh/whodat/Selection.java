@@ -31,6 +31,7 @@ public class Selection extends AppCompatActivity {
             //now you set c.setname to the name of the character (taken from database)
             if(i == 1)
             {
+
                 c.setName("Bronn");
             }
             else
@@ -43,6 +44,5 @@ public class Selection extends AppCompatActivity {
         LinearLayoutManager linearlayout = new LinearLayoutManager(this);
         linearlayout.setOrientation(LinearLayoutManager.VERTICAL);
         rvCharacters.setLayoutManager(linearlayout);
-
     }
 }
