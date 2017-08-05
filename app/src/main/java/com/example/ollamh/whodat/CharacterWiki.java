@@ -18,6 +18,7 @@ public class CharacterWiki extends AppCompatActivity {
         setContentView(R.layout.activity_character_wiki);
         TextView cname = (TextView) findViewById(R.id.cname);
         TextView chouse = (TextView) findViewById(R.id.house);
+        TextView summary = (TextView) findViewById(R.id.sum);
         Bundle extras = getIntent().getExtras();
         String season = extras.getString("season");
         String name = extras.getString("character");
@@ -83,8 +84,6 @@ public class CharacterWiki extends AppCompatActivity {
         {
             button.setImageResource(R.mipmap.placeholder);
         }
-
-        TextView summary = (TextView)findViewById(R.id.sum);
         summary.setMovementMethod(new ScrollingMovementMethod());
 
     }

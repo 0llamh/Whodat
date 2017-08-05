@@ -23,7 +23,7 @@ public class Selection extends AppCompatActivity {
         RecyclerView rvCharacters = (RecyclerView) findViewById(R.id.rvcharacters);
 
         Character c = new Character();
-        do{
+        /*do{
             //iterate through characters and get there relevance codes
             //if(season.contains(character.relevancecode)
             //now you set c.setname to the name of the character (taken from database)
@@ -37,7 +37,9 @@ public class Selection extends AppCompatActivity {
 
             cList.add(c);
         }while(c != null);
-
+*/
+        c.setName("Jon Snow");
+        cList.add(c);
 
         CharacterAdapter adapt= new CharacterAdapter(this,cList, season);
         rvCharacters.setAdapter(adapt);
