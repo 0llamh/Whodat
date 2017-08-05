@@ -18,9 +18,9 @@ import java.io.OutputStream;
 
 public class GoTDatabaseHelper extends SQLiteOpenHelper {
 
-    private static String PATH = "/data/data/com/example/ollamh/whodat/databases/";
+    private String PATH = "/data/data/com.example.ollamh.whodat/databases/";
 
-    private static String NAME = "gotCharacters";
+    private static String NAME = "got.sql";
 
     private SQLiteDatabase myDataBase;
 
@@ -30,6 +30,7 @@ public class GoTDatabaseHelper extends SQLiteOpenHelper {
     public GoTDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, NAME, null, 1);
         this.myContext = context;
+//        PATH = myContext.getDatabasePath(NAME).getPath();
     }
 
     public void createDatabase() throws IOException{

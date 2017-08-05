@@ -45,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       // createDatabase();
+        createDatabase();
 
     }
-/*
+
     private void createDatabase(){
 
         GoTDatabaseHelper dbHelper = new GoTDatabaseHelper(getApplicationContext(), "name", null, 1);
@@ -63,5 +63,5 @@ public class MainActivity extends AppCompatActivity {
             throw sqle;
         }
 
-    }*/
+    }
 }
